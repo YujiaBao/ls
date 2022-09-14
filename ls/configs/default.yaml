@@ -1,0 +1,68 @@
+# Configuration of the ls algorithm
+#
+# The device that we want to use.
+device: cuda:0
+
+model:
+  # Name of the model that we want to use.
+  name:
+  # Keyword arguments for the model.
+  args: {}
+
+optim:
+  # Name of the optimizer that we want to use. Checkout torch.optim for more
+  # options
+  name: Adam
+  # Apply torch.nn.utils.clip_grad_norm_ to clip the gradients.
+  clip_grad_norm: 1
+  args:
+    # Keyword arguments for torch.optim.Adam
+    lr: 0.001
+    weight_decay: 0
+
+lr_scheduler:
+  # Name of the lr scheduler that we want to use. Checkout torch.optim for more
+  # options
+  name:
+  # Keyword arguments for the lr scheduler.
+  args: {}
+
+################## Data handling ##################
+# The number of workers for data loading.
+num_workers: 3
+#
+# We sample num_batches batches for each epoch.
+num_batches: 100
+#
+# The number of examples for each batch
+batch_size: 200
+#
+# Number of classes of the classification dataset
+num_classes: 2
+
+################## LS training ##################
+# The maximum outer loop iterations we can afford.
+num_outer_loop: 100
+#
+# We also stop training if the split hasn't improved for patience epochs.
+patience: 5
+#
+# Ratio of the train / (train + test) size.
+ratio: 0.75
+#
+# Weight for the generalization gap loss.
+w_gap: 1
+#
+# Weight for the train/test ratio loss.
+w_ratio: 1
+#
+# Weight for the train/test label distribution loss.
+w_balance: 1
+#
+# Convergence threshold for the splitter training.
+convergence_thres: 0.001
+#
+# The metric that we use to evaluate the validation performance (and the
+# generalization gap). The default is 'accuracy'. We use 'roc_auc' for Tox 21.
+metric: accuracy
+

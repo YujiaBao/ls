@@ -1,0 +1,2 @@
+include ls/configs/*.yaml
+include ls/configs/models/*.yaml
