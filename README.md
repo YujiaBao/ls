@@ -141,6 +141,7 @@ lr_scheduler = {
         'step_size': 30,
 	'gamma': 0.1
     }
+}
 
 # Run learning_to_split with the specified model, optimizer and learnign rate scheduler.
 train_data, test_data = ls.learning_to_split(data, model={'name': 'mlp'}, optim=optim, lr_scheduler=lr_scheduler)
