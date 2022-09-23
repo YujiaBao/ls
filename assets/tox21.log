@@ -1,0 +1,174 @@
+Python 3.9.13 | packaged by conda-forge | (main, May 27 2022, 16:58:50)
+[GCC 10.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ls
+>>> data = ls.datasets.Tox21()
+>>> train_data, test_data = ls.learning_to_split(data, device='cuda:0', metric='roc_auc', model={'name': 'mlp'}, optim={'name': 'Adam'})
+ls outer loop 0 @ 21:02:37 2022/09/13
+| generalization gap -0.06 (val 83.36, test 83.41)
+| train count 75.1% (7687)
+| test  count 24.9% (2553)
+| train label dist {0: 7388, 1: 299}
+| test  label dist {0: 2457, 1: 96}
+| splitter ep 8 loss 0.0475 (gap 0.1301 ratio 0.0050 label 0.0075)
+ls outer loop 1 @ 21:03:10 2022/09/13
+| generalization gap 22.17 (val 84.79, test 62.63)
+| train count 82.0% (8396)
+| test  count 18.0% (1844)
+| train label dist {0: 8101, 1: 295}
+| test  label dist {0: 1744, 1: 100}
+| splitter ep 15 loss 0.0227 (gap 0.0428 ratio 0.0010 label 0.0243)
+ls outer loop 2 @ 21:03:56 2022/09/13
+| generalization gap 32.27 (val 92.04, test 59.77)
+| train count 73.6% (7537)
+| test  count 26.4% (2703)
+| train label dist {0: 7313, 1: 224}
+| test  label dist {0: 2532, 1: 171}
+| splitter ep 12 loss 0.0436 (gap 0.1130 ratio 0.0027 label 0.0150)
+ls outer loop 3 @ 21:04:42 2022/09/13
+| generalization gap 29.20 (val 89.93, test 60.73)
+| train count 78.0% (7984)
+| test  count 22.0% (2256)
+| train label dist {0: 7842, 1: 142}
+| test  label dist {0: 2003, 1: 253}
+| splitter ep 16 loss 0.0677 (gap 0.1909 ratio 0.0026 label 0.0096)
+ls outer loop 4 @ 21:05:24 2022/09/13
+| generalization gap 20.84 (val 92.71, test 71.88)
+| train count 78.5% (8040)
+| test  count 21.5% (2200)
+| train label dist {0: 7813, 1: 227}
+| test  label dist {0: 2032, 1: 168}
+| splitter ep 18 loss 0.0325 (gap 0.0740 ratio 0.0036 label 0.0199)
+ls outer loop 5 @ 21:06:09 2022/09/13
+| generalization gap 39.31 (val 99.04, test 59.73)
+| train count 78.5% (8041)
+| test  count 21.5% (2199)
+| train label dist {0: 7861, 1: 180}
+| test  label dist {0: 1984, 1: 215}
+| splitter ep 15 loss 0.0164 (gap 0.0222 ratio 0.0020 label 0.0249)
+ls outer loop 6 @ 21:06:49 2022/09/13
+| generalization gap 34.55 (val 99.13, test 64.58)
+| train count 76.7% (7856)
+| test  count 23.3% (2384)
+| train label dist {0: 7690, 1: 166}
+| test  label dist {0: 2155, 1: 229}
+| splitter ep 15 loss 0.0713 (gap 0.1977 ratio 0.0027 label 0.0134)
+ls outer loop 7 @ 21:07:33 2022/09/13
+| generalization gap 34.69 (val 99.45, test 64.77)
+| train count 77.7% (7959)
+| test  count 22.3% (2281)
+| train label dist {0: 7753, 1: 206}
+| test  label dist {0: 2092, 1: 189}
+| splitter ep 10 loss 0.0331 (gap 0.0655 ratio 0.0044 label 0.0292)
+ls outer loop 8 @ 21:08:03 2022/09/13
+| generalization gap 24.93 (val 94.30, test 69.37)
+| train count 78.9% (8083)
+| test  count 21.1% (2157)
+| train label dist {0: 7883, 1: 200}
+| test  label dist {0: 1962, 1: 195}
+| splitter ep 12 loss 0.0489 (gap 0.0941 ratio 0.0086 label 0.0440)
+ls outer loop 9 @ 21:08:47 2022/09/13
+| generalization gap 51.47 (val 98.68, test 47.22)
+| train count 81.5% (8343)
+| test  count 18.5% (1897)
+| train label dist {0: 8138, 1: 205}
+| test  label dist {0: 1707, 1: 190}
+| splitter ep 15 loss 0.0294 (gap 0.0603 ratio 0.0024 label 0.0256)
+ls outer loop 10 @ 21:09:26 2022/09/13
+| generalization gap 27.96 (val 96.74, test 68.78)
+| train count 75.6% (7746)
+| test  count 24.4% (2494)
+| train label dist {0: 7549, 1: 197}
+| test  label dist {0: 2296, 1: 198}
+| splitter ep 12 loss 0.0676 (gap 0.1613 ratio 0.0149 label 0.0266)
+ls outer loop 11 @ 21:10:05 2022/09/13
+| generalization gap 22.99 (val 96.55, test 73.56)
+| train count 82.0% (8397)
+| test  count 18.0% (1843)
+| train label dist {0: 8190, 1: 207}
+| test  label dist {0: 1655, 1: 188}
+| splitter ep 11 loss 0.0576 (gap 0.1237 ratio 0.0119 label 0.0370)
+ls outer loop 12 @ 21:10:46 2022/09/13
+| generalization gap 64.25 (val 99.86, test 35.62)
+| train count 83.3% (8531)
+| test  count 16.7% (1709)
+| train label dist {0: 8329, 1: 202}
+| test  label dist {0: 1516, 1: 193}
+| splitter ep 12 loss 0.0258 (gap 0.0148 ratio 0.0012 label 0.0615)
+ls outer loop 13 @ 21:11:32 2022/09/13
+| generalization gap 24.65 (val 98.13, test 73.49)
+| train count 76.8% (7862)
+| test  count 23.2% (2378)
+| train label dist {0: 7660, 1: 202}
+| test  label dist {0: 2185, 1: 193}
+| splitter ep 11 loss 0.1038 (gap 0.1585 ratio 0.0294 label 0.1235)
+ls outer loop 14 @ 21:12:04 2022/09/13
+| generalization gap 27.33 (val 97.54, test 70.21)
+| train count 86.6% (8870)
+| test  count 13.4% (1370)
+| train label dist {0: 8682, 1: 188}
+| test  label dist {0: 1163, 1: 207}
+| splitter ep 15 loss 0.1282 (gap 0.2326 ratio 0.0380 label 0.1140)
+ls outer loop 15 @ 21:12:44 2022/09/13
+| generalization gap 42.79 (val 99.59, test 56.80)
+| train count 88.7% (9085)
+| test  count 11.3% (1155)
+| train label dist {0: 8898, 1: 187}
+| test  label dist {0: 947, 1: 208}
+| splitter ep 23 loss 0.0495 (gap 0.0803 ratio 0.0077 label 0.0607)
+ls outer loop 16 @ 21:13:45 2022/09/13
+| generalization gap 57.41 (val 99.70, test 42.29)
+| train count 81.4% (8338)
+| test  count 18.6% (1902)
+| train label dist {0: 8143, 1: 195}
+| test  label dist {0: 1702, 1: 200}
+| splitter ep 14 loss 0.0548 (gap 0.0960 ratio 0.0131 label 0.0554)
+ls outer loop 17 @ 21:14:29 2022/09/13
+| generalization gap 64.77 (val 99.87, test 35.10)
+| train count 86.1% (8819)
+| test  count 13.9% (1421)
+| train label dist {0: 8626, 1: 193}
+| test  label dist {0: 1219, 1: 202}
+| splitter ep 11 loss 0.0790 (gap 0.2175 ratio 0.0032 label 0.0164)
+ls outer loop 18 @ 21:15:10 2022/09/13
+| generalization gap 49.38 (val 99.99, test 50.60)
+| train count 75.1% (7691)
+| test  count 24.9% (2549)
+| train label dist {0: 7511, 1: 180}
+| test  label dist {0: 2334, 1: 215}
+| splitter ep 7 loss 0.3966 (gap 1.0219 ratio 0.0533 label 0.1145)
+ls outer loop 19 @ 21:15:42 2022/09/13
+| generalization gap 29.04 (val 99.19, test 70.15)
+| train count 84.2% (8626)
+| test  count 15.8% (1614)
+| train label dist {0: 8498, 1: 128}
+| test  label dist {0: 1347, 1: 267}
+| splitter ep 14 loss 0.0477 (gap 0.1165 ratio 0.0042 label 0.0224)
+ls outer loop 20 @ 21:16:27 2022/09/13
+| generalization gap 42.00 (val 99.21, test 57.20)
+| train count 79.6% (8149)
+| test  count 20.4% (2091)
+| train label dist {0: 7957, 1: 192}
+| test  label dist {0: 1888, 1: 203}
+| splitter ep 12 loss 0.4810 (gap 1.2584 ratio 0.0526 label 0.1321)
+ls outer loop 21 @ 21:17:05 2022/09/13
+| generalization gap 48.84 (val 97.78, test 48.94)
+| train count 91.0% (9318)
+| test  count  9.0% (922)
+| train label dist {0: 9166, 1: 152}
+| test  label dist {0: 679, 1: 243}
+| splitter ep 12 loss 0.1532 (gap 0.3324 ratio 0.0300 label 0.0970)
+ls outer loop 22 @ 21:17:55 2022/09/13
+| generalization gap 44.76 (val 99.83, test 55.07)
+| train count 88.3% (9038)
+| test  count 11.7% (1202)
+| train label dist {0: 8874, 1: 164}
+| test  label dist {0: 971, 1: 231}
+Finished!
+Best split:
+ls outer loop 17 @ 21:17:55 2022/09/13
+| generalization gap 64.77 (val 99.87, test 35.10)
+| train count 86.1% (8819)
+| test  count 13.9% (1421)
+| train label dist {0: 8626, 1: 193}
+| test  label dist {0: 1219, 1: 202}
