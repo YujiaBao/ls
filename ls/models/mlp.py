@@ -39,6 +39,7 @@ class mlp(nn.Module):
             if i != len(self.hidden_dim_list) - 1:
                 modules.append(nn.Linear(self.hidden_dim_list[i],
                                          self.hidden_dim_list[i+1]))
+                modules.append(nn.ReLU())
             else:
                 # Final layer
                 modules.append(nn.Linear(self.hidden_dim_list[i], num_classes))

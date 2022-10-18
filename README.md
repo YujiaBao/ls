@@ -42,14 +42,14 @@ You can directly use the `ls.learning_to_split()` interface to generate challeng
 >>> train_data, test_data = ls.learning_to_split(data, model={'name': 'mlp'}, metric='roc_auc')
 
 Best split:
-ls outer loop 17 @ 21:17:55 2022/09/13
-| generalization gap 64.77 (val 99.87, test 35.10)
-| train count 86.1% (8819)
-| test  count 13.9% (1421)
-| train label dist {0: 8626, 1: 193}
-| test  label dist {0: 1219, 1: 202}
+ls outer loop 9 @ 23:51:42 2022/10/17
+| generalization gap 64.31 (val 98.97, test 34.65)
+| train count 72.7% (7440)
+| test  count 27.3% (2800)
+| train label dist {0: 7218, 1: 222}
+| test  label dist {0: 2627, 1: 173}
 ```
-By default, `learning_to_split` will output the split status for each outer loop iteration (see [tox21.log](assets/tox21.log) for the full log). In this example, we see that `ls` converged after 17 iterations. It identified a very challenging train/test split (generalization gap = 64.77%).
+By default, `learning_to_split` will output the split status for each outer loop iteration (see [tox21.log](assets/tox21.log) for the full log). In this example, we see that `ls` converged after 9 iterations. It identified a very challenging train/test split (generalization gap = 64.31%).
 
 In some cases, one may want to access the indices of the training/testing data or examine the learned dataset splitter. Users can tailor the output to their own needs through the `return_order` argument.
 ```python
