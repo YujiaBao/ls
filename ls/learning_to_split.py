@@ -135,8 +135,8 @@ def learning_to_split(data: Dataset,
 
         elif element == 'splitter':
             # return the learned splitter
-            model['splitter'].load_state_dict(best_split['splitter'])
-            outputs.append(model['splitter'])
+            splitter.load_state_dict(best_split['splitter'])
+            outputs.append(splitter)
 
         else:
             raise ValueError(f'Unsupported return type {element}')
