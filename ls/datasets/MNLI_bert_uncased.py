@@ -30,9 +30,6 @@ class MNLI_bert_uncased(torch.utils.data.Dataset):
 
         self.data, self.targets = MNLI_bert_uncased.load_data(root, split)
 
-        self.data = self.data[:100]
-        self.targets = self.targets[:100]
-
         self.length = len(self.targets)
 
     @staticmethod
